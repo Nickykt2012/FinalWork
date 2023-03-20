@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-string[] Array = new [] {"Hello", "Russia", "-2", "One"};
+string[] myArray = {"Hello", "Russia", "-2", "One"};
+for (int i = 0; i < 4; i++)
+{
+Console.WriteLine(myArray [i]);
+}
 
-Console.WriteLine(Array);
