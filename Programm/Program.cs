@@ -1,10 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-string[] myArray = {"Hello", "Russia", "-2", "One"};
-for (int i = 0; i < myArray.Length; i++)
+﻿string[] source = new string[] { "hello", "2", "world", ":-)" };       
+string[] target = new string[0];
+    
+for (int i = 0; i < source.Length; i++)
 {
-Console.WriteLine(myArray [i]);
-}
-
-
-
+    if (source[i].Length <= 3)
+    {
+    Array.Resize(ref target, target.Length + 1);
+    target[target.Length - 1] = source[i];
+    }
+}         
+for (int i = 0; i < target.Length; i++)  
+    {           
+    Console.WriteLine(target[i]);
+    }
